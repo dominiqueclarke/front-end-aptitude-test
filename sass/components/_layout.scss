@@ -1,0 +1,29 @@
+#video, #services {
+    width:100%;
+    padding-top:2em;
+}
+
+#video {
+    height:480px;
+    display:flex;
+    justify-content:space-between;
+    .video-wrapper {
+        width:48%;
+    }
+    .video-caption {
+        width:48%;
+    }
+}
+
+#services {
+    .services-list {
+        display:flex;
+        justify-content:space-between;
+        .service {
+            width:32%;
+            height:250px;
+            border:5px solid $accent-color;
+            text-align:center;
+        }
+    }
+}

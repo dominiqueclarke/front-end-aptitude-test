@@ -1,0 +1,14 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    background-color:$primary-color;
+    margin:0;
+}
+
+.container {
+    max-width:1080px;
+    width:90%;
+    margin:0 auto;
+}

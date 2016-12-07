@@ -1,0 +1,174 @@
+/* ==========================================================================
+   Materialize variables
+   ========================================================================== */
+/**
+ * Table of Contents:
+ *
+ *  1. Colors
+ *  2. Buttons
+ *  3. Grid
+ *  4. Photo Slider
+ *  5. Typography
+ *  6. Footer
+ */
+/* line 1, ../sass/components/_global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/components/_global.scss */
+body {
+  background-color: #D6CCC3;
+  margin: 0;
+}
+
+/* line 10, ../sass/components/_global.scss */
+.container {
+  max-width: 1080px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 1, ../sass/components/_carousel.scss */
+#carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 4px;
+}
+/* line 7, ../sass/components/_carousel.scss */
+#carousel ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+/* line 14, ../sass/components/_carousel.scss */
+#carousel ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+  height: 100%;
+  width: 100%;
+}
+/* line 23, ../sass/components/_carousel.scss */
+#carousel ul li#carousel-cell-1 {
+  background-image: url("../assets/img/cell-1-img.jpg");
+  background-size: 100vw 100vh;
+}
+/* line 27, ../sass/components/_carousel.scss */
+#carousel ul li#carousel-cell-2 {
+  background-image: url("../assets/img/cell-2-img.jpg");
+  background-size: 100vw 100vh;
+}
+/* line 32, ../sass/components/_carousel.scss */
+#carousel ul li#carousel-cell-3 {
+  background-image: url("../assets/img/cell-3-img.jpg");
+  background-size: 100vw 100vh;
+}
+
+/* line 40, ../sass/components/_carousel.scss */
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* line 57, ../sass/components/_carousel.scss */
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+/* line 62, ../sass/components/_carousel.scss */
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+/* line 66, ../sass/components/_carousel.scss */
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/* line 71, ../sass/components/_carousel.scss */
+.carousel_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+/* line 1, ../sass/components/_layout.scss */
+#video, #services {
+  width: 100%;
+  padding-top: 2em;
+}
+
+/* line 6, ../sass/components/_layout.scss */
+#video {
+  height: 480px;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 10, ../sass/components/_layout.scss */
+#video .video-wrapper {
+  width: 48%;
+}
+/* line 13, ../sass/components/_layout.scss */
+#video .video-caption {
+  width: 48%;
+}
+
+/* line 19, ../sass/components/_layout.scss */
+#services .services-list {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 22, ../sass/components/_layout.scss */
+#services .services-list .service {
+  width: 32%;
+  height: 250px;
+  border: 5px solid #DEA287;
+  text-align: center;
+}
+
+/* line 1, ../sass/components/_video.scss */
+.video-wrapper {
+  width: 45%;
+}
+
+/* line 5, ../sass/components/_video.scss */
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+/* line 11, ../sass/components/_video.scss */
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
