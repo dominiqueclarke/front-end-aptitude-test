@@ -41,9 +41,14 @@ body {
   height: 100vh;
   border-radius: 4px;
   background-color: #DEA287;
-  transition: all .5s ease-in-out;
 }
-/* line 9, ../sass/components/_carousel.scss */
+@media screen and (max-width: 720px) {
+  /* line 1, ../sass/components/_carousel.scss */
+  #carousel {
+    height: 400px;
+  }
+}
+/* line 11, ../sass/components/_carousel.scss */
 #carousel ul {
   position: relative;
   margin: 0;
@@ -52,7 +57,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 16, ../sass/components/_carousel.scss */
+/* line 18, ../sass/components/_carousel.scss */
 #carousel ul li {
   position: absolute;
   top: 0;
@@ -61,7 +66,7 @@ body {
   width: 100%;
   opacity: 0;
 }
-/* line 23, ../sass/components/_carousel.scss */
+/* line 25, ../sass/components/_carousel.scss */
 #carousel ul li h2, #carousel ul li h3 {
   background-color: #DEA287;
   text-align: left;
@@ -70,20 +75,20 @@ body {
   padding: 0 20px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 30, ../sass/components/_carousel.scss */
+/* line 32, ../sass/components/_carousel.scss */
 #carousel ul li h2:after, #carousel ul li h3:after {
   width: 0;
   height: 0;
 }
-/* line 35, ../sass/components/_carousel.scss */
+/* line 37, ../sass/components/_carousel.scss */
 #carousel ul li h2 {
   font-size: 5em;
 }
-/* line 38, ../sass/components/_carousel.scss */
+/* line 40, ../sass/components/_carousel.scss */
 #carousel ul li h3 {
   font-size: 4em;
 }
-/* line 41, ../sass/components/_carousel.scss */
+/* line 43, ../sass/components/_carousel.scss */
 #carousel ul li .container {
   display: flex;
   margin-top: 6em;
@@ -91,33 +96,33 @@ body {
   flex-direction: column;
   width: 80%;
 }
-/* line 48, ../sass/components/_carousel.scss */
+/* line 50, ../sass/components/_carousel.scss */
 #carousel ul li#carousel-cell-1 {
   background-image: url("../assets/img/cell-1-img.jpg");
   background-size: 100vw 100vh;
 }
-/* line 52, ../sass/components/_carousel.scss */
+/* line 54, ../sass/components/_carousel.scss */
 #carousel ul li#carousel-cell-2 {
   background-image: url("../assets/img/cell-2-img.jpg");
   background-size: 100vw 100vh;
 }
-/* line 57, ../sass/components/_carousel.scss */
+/* line 59, ../sass/components/_carousel.scss */
 #carousel ul li#carousel-cell-3 {
   background-image: url("../assets/img/cell-3-img.jpg");
   background-size: 100vw 100vh;
 }
 @media screen and (max-width: 720px) {
-  /* line 62, ../sass/components/_carousel.scss */
+  /* line 64, ../sass/components/_carousel.scss */
   #carousel ul li h2 {
     font-size: 2em;
   }
-  /* line 65, ../sass/components/_carousel.scss */
+  /* line 67, ../sass/components/_carousel.scss */
   #carousel ul li h3 {
     font-size: 1.5em;
   }
 }
 
-/* line 73, ../sass/components/_carousel.scss */
+/* line 75, ../sass/components/_carousel.scss */
 a.control_prev, a.control_next {
   position: absolute;
   top: 40%;
@@ -136,25 +141,25 @@ a.control_prev, a.control_next {
   transition: all .5s ease-in-out;
 }
 
-/* line 91, ../sass/components/_carousel.scss */
+/* line 93, ../sass/components/_carousel.scss */
 a.control_prev:hover, a.control_next:hover {
   opacity: 1;
   background-color: #DEA287;
   transition: all .5s ease-in-out;
 }
 
-/* line 97, ../sass/components/_carousel.scss */
+/* line 99, ../sass/components/_carousel.scss */
 a.control_prev {
   border-radius: 0 2px 2px 0;
 }
 
-/* line 101, ../sass/components/_carousel.scss */
+/* line 103, ../sass/components/_carousel.scss */
 a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }
 
-/* line 106, ../sass/components/_carousel.scss */
+/* line 108, ../sass/components/_carousel.scss */
 svg.down-arrow {
   transition: all .5s ease-in-out;
   animation: 2s linear 0s infinite arrowAnimation;
