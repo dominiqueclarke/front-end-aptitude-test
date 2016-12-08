@@ -32,6 +32,9 @@
                 background-size:100% 135%;
             }
         }
+        @media screen and (max-width:$small-screen) {
+            opacity:1;
+        }
     }
     &:hover {
         .social-share {

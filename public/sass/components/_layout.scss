@@ -1,6 +1,9 @@
-#video, #services, #clients-map {
+#services, #video, #clients-map {
     width:100%;
     padding:3em 0;
+    h2 {
+        font-size:28px;
+    }
 }
 
 header {
@@ -113,9 +116,13 @@ header {
             @media screen and (max-width:$small-screen) {
                 width:100%;
                 margin-top:2em;
+                box-shadow:$z-depth;
                 .img-container {
-                    top:1em;
-                    left:1em;
+                    top:0em;
+                    left:0em;
+                }
+                p {
+                    background-color:rgba($accent-color, 1);
                 }
             }
         }

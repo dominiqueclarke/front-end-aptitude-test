@@ -88,24 +88,35 @@ body {
   margin-top: 6em;
   align-items: flex-start;
   flex-direction: column;
+  width: 80%;
 }
-/* line 46, ../sass/components/_carousel.scss */
+/* line 47, ../sass/components/_carousel.scss */
 #carousel ul li#carousel-cell-1 {
   background-image: url("../assets/img/cell-1-img.jpg");
   background-size: 100vw 100vh;
 }
-/* line 50, ../sass/components/_carousel.scss */
+/* line 51, ../sass/components/_carousel.scss */
 #carousel ul li#carousel-cell-2 {
   background-image: url("../assets/img/cell-2-img.jpg");
   background-size: 100vw 100vh;
 }
-/* line 55, ../sass/components/_carousel.scss */
+/* line 56, ../sass/components/_carousel.scss */
 #carousel ul li#carousel-cell-3 {
   background-image: url("../assets/img/cell-3-img.jpg");
   background-size: 100vw 100vh;
 }
+@media screen and (max-width: 720px) {
+  /* line 61, ../sass/components/_carousel.scss */
+  #carousel ul li h2 {
+    font-size: 2em;
+  }
+  /* line 64, ../sass/components/_carousel.scss */
+  #carousel ul li h3 {
+    font-size: 1.5em;
+  }
+}
 
-/* line 63, ../sass/components/_carousel.scss */
+/* line 72, ../sass/components/_carousel.scss */
 a.control_prev, a.control_next {
   position: absolute;
   top: 40%;
@@ -124,25 +135,25 @@ a.control_prev, a.control_next {
   transition: all .5s ease-in-out;
 }
 
-/* line 81, ../sass/components/_carousel.scss */
+/* line 90, ../sass/components/_carousel.scss */
 a.control_prev:hover, a.control_next:hover {
   opacity: 1;
   background-color: #DEA287;
   transition: all .5s ease-in-out;
 }
 
-/* line 87, ../sass/components/_carousel.scss */
+/* line 96, ../sass/components/_carousel.scss */
 a.control_prev {
   border-radius: 0 2px 2px 0;
 }
 
-/* line 91, ../sass/components/_carousel.scss */
+/* line 100, ../sass/components/_carousel.scss */
 a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }
 
-/* line 96, ../sass/components/_carousel.scss */
+/* line 105, ../sass/components/_carousel.scss */
 svg.down-arrow {
   transition: all .5s ease-in-out;
   animation: 2s linear 0s infinite arrowAnimation;
@@ -171,16 +182,20 @@ svg.down-arrow {
   }
 }
 /* line 1, ../sass/components/_layout.scss */
-#video, #services, #clients-map {
+#services, #video, #clients-map {
   width: 100%;
   padding: 3em 0;
 }
+/* line 4, ../sass/components/_layout.scss */
+#services h2, #video h2, #clients-map h2 {
+  font-size: 28px;
+}
 
-/* line 6, ../sass/components/_layout.scss */
+/* line 9, ../sass/components/_layout.scss */
 header {
   position: relative;
 }
-/* line 8, ../sass/components/_layout.scss */
+/* line 11, ../sass/components/_layout.scss */
 header svg {
   position: absolute;
   width: 100px;
@@ -190,73 +205,73 @@ header svg {
   left: 0;
 }
 
-/* line 19, ../sass/components/_layout.scss */
+/* line 22, ../sass/components/_layout.scss */
 #clients-map .container {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 }
-/* line 25, ../sass/components/_layout.scss */
+/* line 28, ../sass/components/_layout.scss */
 #clients-map .map-container {
   height: 320px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 29, ../sass/components/_layout.scss */
+/* line 32, ../sass/components/_layout.scss */
 #clients-map .map-caption, #clients-map .map-container {
   width: 48%;
 }
 @media screen and (max-width: 992px) {
-  /* line 29, ../sass/components/_layout.scss */
+  /* line 32, ../sass/components/_layout.scss */
   #clients-map .map-caption, #clients-map .map-container {
     width: 100%;
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 35, ../sass/components/_layout.scss */
+  /* line 38, ../sass/components/_layout.scss */
   #clients-map .map-caption {
     margin-top: 2em;
   }
 }
 
-/* line 42, ../sass/components/_layout.scss */
+/* line 45, ../sass/components/_layout.scss */
 #video {
   background-color: #fff;
 }
-/* line 44, ../sass/components/_layout.scss */
+/* line 47, ../sass/components/_layout.scss */
 #video .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 49, ../sass/components/_layout.scss */
+/* line 52, ../sass/components/_layout.scss */
 #video .video-wrapper, #video .video-caption {
   width: 48%;
 }
 @media screen and (max-width: 992px) {
-  /* line 49, ../sass/components/_layout.scss */
+  /* line 52, ../sass/components/_layout.scss */
   #video .video-wrapper, #video .video-caption {
     width: 100%;
   }
 }
 @media screen and (max-width: 992px) {
-  /* line 55, ../sass/components/_layout.scss */
+  /* line 58, ../sass/components/_layout.scss */
   #video .video-caption {
     margin-top: 2em;
   }
 }
 
-/* line 62, ../sass/components/_layout.scss */
+/* line 65, ../sass/components/_layout.scss */
 #services {
   text-align: center;
 }
-/* line 64, ../sass/components/_layout.scss */
+/* line 67, ../sass/components/_layout.scss */
 #services .services-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 68, ../sass/components/_layout.scss */
+/* line 71, ../sass/components/_layout.scss */
 #services .services-list .service {
   width: 32%;
   height: 250px;
@@ -269,12 +284,12 @@ header svg {
   justify-content: center;
   transition: all .5s ease-in-out;
 }
-/* line 79, ../sass/components/_layout.scss */
+/* line 82, ../sass/components/_layout.scss */
 #services .services-list .service p {
   background-color: rgba(222, 162, 135, 0.7);
   padding: 1em;
 }
-/* line 83, ../sass/components/_layout.scss */
+/* line 86, ../sass/components/_layout.scss */
 #services .services-list .service .img-container {
   width: 100%;
   height: 100%;
@@ -286,56 +301,61 @@ header svg {
   transition: all .5s ease-in-out;
   filter: grayscale(100);
 }
-/* line 94, ../sass/components/_layout.scss */
+/* line 97, ../sass/components/_layout.scss */
 #services .services-list .service:hover {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 96, ../sass/components/_layout.scss */
+/* line 99, ../sass/components/_layout.scss */
 #services .services-list .service:hover .img-container {
   top: 0;
   left: 0;
   transition: all .5s ease-in-out;
   filter: grayscale(0);
 }
-/* line 102, ../sass/components/_layout.scss */
+/* line 105, ../sass/components/_layout.scss */
 #services .services-list .service:hover p {
   background-color: #dea287;
   transition: all .5s ease-in-out;
 }
 @media screen and (max-width: 992px) {
-  /* line 108, ../sass/components/_layout.scss */
+  /* line 111, ../sass/components/_layout.scss */
   #services .services-list .service .img-container {
     top: .5em;
     left: .5em;
   }
 }
-@media screen and (max-width: 768px) {
-  /* line 68, ../sass/components/_layout.scss */
+@media screen and (max-width: 720px) {
+  /* line 71, ../sass/components/_layout.scss */
   #services .services-list .service {
     width: 100%;
     margin-top: 2em;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
   }
-  /* line 116, ../sass/components/_layout.scss */
+  /* line 120, ../sass/components/_layout.scss */
   #services .services-list .service .img-container {
-    top: 1em;
-    left: 1em;
+    top: 0em;
+    left: 0em;
+  }
+  /* line 124, ../sass/components/_layout.scss */
+  #services .services-list .service p {
+    background-color: #dea287;
   }
 }
 
-/* line 125, ../sass/components/_layout.scss */
+/* line 132, ../sass/components/_layout.scss */
 footer {
   height: 150px;
   background-color: #DEA287;
 }
-/* line 128, ../sass/components/_layout.scss */
+/* line 135, ../sass/components/_layout.scss */
 footer .footer-content {
   padding-top: 1em;
 }
-/* line 130, ../sass/components/_layout.scss */
+/* line 137, ../sass/components/_layout.scss */
 footer .footer-content p {
   font-size: 14px;
 }
-/* line 134, ../sass/components/_layout.scss */
+/* line 141, ../sass/components/_layout.scss */
 footer .copyright {
   height: 60px;
   line-height: 60px;
@@ -400,7 +420,13 @@ footer .copyright {
   background-position-y: -5px;
   background-size: 100% 135%;
 }
-/* line 37, ../sass/components/_social.scss */
+@media screen and (max-width: 720px) {
+  /* line 2, ../sass/components/_social.scss */
+  .service .social-share {
+    opacity: 1;
+  }
+}
+/* line 40, ../sass/components/_social.scss */
 .service:hover .social-share {
   opacity: 1;
   transition: all .5s ease-in-out;
