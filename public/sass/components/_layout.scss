@@ -8,6 +8,34 @@
 
 header {
     position:relative;
+    #logo {
+        position:absolute;
+        top:0;
+        right:0;
+        z-index:2;
+        width:100%;
+        text-align:right;
+        .container {
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            margin-top:2em;
+        }
+        img {
+            width:48px;
+            height:auto;
+        }
+        h1 {
+            font-size:24px;
+            line-height:48px;
+            height:48px;
+            margin:0 .5em 0 0;
+            &:after {
+                height:0;
+                width:0;
+            }
+        }
+    }
     svg {
         position:absolute;
         width:100px;
