@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/dominiqueclarke/front-end-aptitude-test/issues"
   },
-  "homepage": "https://github.com/dominiqueclarke/front-end-aptitude-test#readme"
+  "homepage": "https://github.com/dominiqueclarke/front-end-aptitude-test#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
