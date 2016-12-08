@@ -1,0 +1,10 @@
+#map {
+    filter: grayscale(100);
+    transition:all .5s ease-in-out;
+    width:100%;
+    height:100%;
+    &:hover {
+        filter:grayscale(0);
+        transition:all .5s ease-in-out;
+    }
+}

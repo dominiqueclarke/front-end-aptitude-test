@@ -1,14 +1,47 @@
-#video, #services {
+#video, #services, #clients-map {
     width:100%;
-    padding-top:2em;
+    padding:5em 0;
+}
+
+header {
+    position:relative;
+    svg {
+        position:absolute;
+        width:100px;
+        margin:auto;
+        bottom:1em;
+        right:0;
+        left:0;
+    }
+}
+
+#clients-map {
+    height:480px;
+    .container {
+        display:flex;
+        justify-content:space-between;
+        flex-direction:row-reverse;
+    }
+    .map-container {
+        height:100%;
+        width:48%;
+        box-shadow:0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
+    }
+    .map-caption {
+        width:48%;
+    }
 }
 
 #video {
     height:480px;
-    display:flex;
-    justify-content:space-between;
+    background-color:white;
+    .container {
+        display:flex;
+        justify-content:space-between;
+    }
     .video-wrapper {
         width:48%;
+        box-shadow:0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3)
     }
     .video-caption {
         width:48%;
@@ -16,6 +49,7 @@
 }
 
 #services {
+    text-align:center;
     .services-list {
         display:flex;
         justify-content:space-between;
@@ -24,6 +58,49 @@
             height:250px;
             border:5px solid $accent-color;
             text-align:center;
+            position:relative;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            transition:all .5s ease-in-out;
+            p {
+                background-color:rgba($accent-color, .7);
+                padding:1em;
+            }
+            .img-container {
+                width:100%;
+                height:100%;
+                overflow:hidden;
+                position:absolute;
+                top:1em;
+                left:1em;
+                z-index:-1;
+                transition: all .5s ease-in-out;
+                filter:grayscale(100);
+            }
+            &:hover {
+                box-shadow:$z-depth;
+                .img-container {
+                    top:0;
+                    left:0;
+                    transition: all .5s ease-in-out;
+                    filter:grayscale(0);
+                }
+                p {
+                    background-color:rgba($accent-color, 1);
+                    transition: all .5s ease-in-out;
+                }
+            }
         }
+    }
+}
+
+footer {
+    height:150px;
+    background-color:$accent-color;
+    .copyright {
+        height:60px;
+        background-color:darken($accent-color, 5%);
     }
 }

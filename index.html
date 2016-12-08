@@ -13,49 +13,116 @@
             <a href="#" class="control_next">></a>
             <a href="#" class="control_prev"><</a>
             <ul>
-                <li id="carousel-cell-1">lkjlk</li>
-                <li id="carousel-cell-2">jlkj</li>
-                <li id="carousel-cell-3">kljl</li>
+                <li id="carousel-cell-1" class="active">
+                    <div class="container">
+                        <h2>Slide 1</h2>
+                        <h3>Slide 1 caption</h3>
+                    </div>
+                </li>
+                <li id="carousel-cell-2">
+                    <div class="container">
+                        <h2>Slide 2</h2>
+                        <h3>Slide 2 caption</h3>
+                    </div>
+                </li>
+                <li id="carousel-cell-3">
+                    <div class="container">
+                        <h2>Slide 3</h2>
+                        <h3>Slide 3 caption</h3>
+                    </div>
+                </li>
             </ul>
         </div>
-
+        <svg viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z"/><path d="M0-.75h48v48h-48z" fill="none"/></svg>
     </header>
     <main>
         <section id="services">
             <div class="container">
+                <h2 class="centered">Our Services</h2>
                 <div class="services-list">
                     <div class="service">
-                        Service
+                        <p>Social Media</p>
+                        <div class="img-container"><img src="assets/img/service-1.jpg" alt="service 3" /></div>
+                        <div class="social-share">
+                            <span class='st_facebook_large' displayText='Facebook'></span>
+                            <span class='st_twitter_large' displayText='Tweet'></span>
+                            <span class='st_pinterest_large' displayText='Pinterest'></span>
+                            <span class='st_email_large' displayText='Email'></span>
+                        </div>
                     </div>
                     <div class="service">
-                        Service
+                        <p>Digital Marketing</p>
+                        <div class="img-container"><img src="assets/img/service-2.jpg" alt="service 3" /></div>
+                        <div class="social-share">
+                            <span class='st_facebook_large' displayText='Facebook'></span>
+                            <span class='st_twitter_large' displayText='Tweet'></span>
+                            <span class='st_pinterest_large' displayText='Pinterest'></span>
+                            <span class='st_email_large' displayText='Email'></span>
+                        </div>
                     </div>
                     <div class="service">
-                        Service
+                        <p>Web Development</p>
+                        <div class="img-container"><img src="assets/img/service-3.jpg" alt="service 3" /></div>
+                        <div class="social-share">
+                            <span class='st_facebook_large' displayText='Facebook'></span>
+                            <span class='st_twitter_large' displayText='Tweet'></span>
+                            <span class='st_pinterest_large' displayText='Pinterest'></span>
+                            <span class='st_email_large' displayText='Email'></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="video" class="container">
-            <div class="video-wrapper">
-                <div class="iframe-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-SJXOTtdTDE?list=PLx-qGAzjv13c00FYZMLAJm65WjsT3ZmDR" frameborder="0" allowfullscreen></iframe>
+        <section id="video">
+            <div class="container">
+                <div class="video-wrapper">
+                    <div class="iframe-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-SJXOTtdTDE?list=PLx-qGAzjv13c00FYZMLAJm65WjsT3ZmDR" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h2>Check out the video</h2>
+                    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+                    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
                 </div>
             </div>
-            <div class="video-caption">
-                <h2>Watch our video</h2>
+        </section>
+        <section id="clients-map">
+            <div class="container">
+                <div class ="map-container">
+                    <div id="map"></div>
+                </div>
+                <div class="map-caption">
+                    <h2>Watch our video</h2>
+                    <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+                    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
+        <div class="container">
+            <div class="footer-content">
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+            </div>
+        </div>
     </fotter>
-
     <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv7t3olAi9Yk339KoU94dpiEU5SfIXEbk&libraries=places"
+    async defer></script>
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=0f8fdfbb-5869-4cdc-b2f8-1d4d7adeb4e7"></script>
+    <script type="text/javascript">stLight.options({publisher: "0f8fdfbb-5869-4cdc-b2f8-1d4d7adeb4e7", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
     <script src="src/app.js"></script>
     <script src="src/mainCtrl.js"></script>
+    <script src="src/services/mapService.js"></script>
 </body>
 </html>

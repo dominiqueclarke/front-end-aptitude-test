@@ -1,17 +1,13 @@
 angular.module("test")
-.controller("mainCtrl", function($scope) {
+.controller("mainCtrl", function($scope, mapService) {
+    $scope.array = mapService.initMap();
     $scope.test = "hi";
 
 
     jQuery(document).ready(function ($) {
 
         let carouselInt;
-        const slideCount = $('#carousel ul li').length;
-    	const slideWidth = $('#carousel ul li').width();
-    	const slideHeight = $('#carousel ul li').height();
-    	const sliderUlWidth = slideCount * slideWidth;
-        const intervalSpeed = 3000;
-        const transitionSpeed = 1000;
+        const intervalSpeed = 300000;
 
         const timer = function() {
             carouselInt = setInterval(function () {
@@ -21,32 +17,21 @@ angular.module("test")
 
         timer();
 
-	    $('#carousel').css({ width: slideWidth, height: slideHeight });
-
-	    $('#carousel ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-        $('#carousel ul li:last-child').prependTo('#carousel ul');
+        $('#carousel ul li:first-child').addClass('active').css('opacity', '1');
 
         function moveLeft() {
-            $('#carousel ul').animate({
-                left: + slideWidth
-            }, transitionSpeed, function () {
-                $('#carousel ul li:first-child').css('left', '');
+                $('#carousel ul li.active').removeClass('active').fadeTo('slow', '0');
                 $('#carousel ul li:last-child').prependTo('#carousel ul');
+                $('#carousel ul li:first-child').addClass('active').fadeTo('slow', '1');
                 clearInterval(carouselInt);
                 timer();
-            });
         };
 
         function moveRight() {
-            $('#carousel ul').animate({
-                left: - slideWidth
-            }, transitionSpeed, function () {
-                $('#carousel ul li:first-child').appendTo('#carousel ul');
-                $('#carousel ul li:first-child').css('left', '');
+                $('#carousel ul li.active').appendTo('#carousel ul').removeClass('active').fadeTo('slow', '0');
+                $('#carousel ul li:first-child').addClass('active').fadeTo('medium', '1');
                 clearInterval(carouselInt);
                 timer();
-            });
         };
 
     $('a.control_prev').click(function () {
