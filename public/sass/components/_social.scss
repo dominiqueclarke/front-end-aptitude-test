@@ -1,0 +1,42 @@
+.service {
+    .social-share {
+        opacity:0;
+        position:absolute;
+        bottom:2em;
+        right:0;
+        left:0;
+        transition:all .5s ease-in-out;
+        .stLarge {
+            background-size:contain;
+            background-color:white;
+        }
+        .st_facebook_large {
+            .stLarge {
+                background-image: url("../assets/img/fb-icon.png") !important;
+            }
+        }
+        .st_twitter_large {
+            .stLarge {
+                background-image: url("../assets/img/twitter-icon.png") !important;
+            }
+        }
+        .st_pinterest_large {
+            .stLarge {
+                background-image: url("../assets/img/pinterest-icon.png") !important;
+            }
+        }
+        .st_email_large {
+            .stLarge {
+                background-image: url("../assets/img/email-icon.png") !important;
+                background-position-y: -5px;
+                background-size:100% 135%;
+            }
+        }
+    }
+    &:hover {
+        .social-share {
+            opacity:1;
+            transition: all .5s ease-in-out;
+        }
+    }
+}
