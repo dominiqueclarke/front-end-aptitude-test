@@ -11,6 +11,8 @@
  */
 /* --- Colors --- */
 /* --- Typography --- */
+/* --- Media widths --- */
+/* Large Devices, Wide Screens */
 /* line 1, ../sass/components/_global.scss */
 * {
   box-sizing: border-box;
@@ -21,10 +23,9 @@
 body {
   background-color: #D6CCC3;
   margin: 0;
-  font-size: 18px;
 }
 
-/* line 12, ../sass/components/_global.scss */
+/* line 11, ../sass/components/_global.scss */
 .container {
   max-width: 1080px;
   width: 90%;
@@ -142,17 +143,37 @@ a.control_next {
 }
 
 /* line 96, ../sass/components/_carousel.scss */
-.carousel_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
+svg.down-arrow {
+  transition: all .5s ease-in-out;
+  animation: 2s linear 0s infinite arrowAnimation;
 }
 
+@keyframes arrowAnimation {
+  0% {
+    fill: #DEA287;
+  }
+  50% {
+    fill: #fff;
+  }
+  100% {
+    fill: #DEA287;
+  }
+}
+@-webkit-keyframes arrowAnimation {
+  0% {
+    fill: #DEA287;
+  }
+  50% {
+    fill: #fff;
+  }
+  100% {
+    fill: #DEA287;
+  }
+}
 /* line 1, ../sass/components/_layout.scss */
 #video, #services, #clients-map {
   width: 100%;
-  padding: 5em 0;
+  padding: 3em 0;
 }
 
 /* line 6, ../sass/components/_layout.scss */
@@ -169,57 +190,73 @@ header svg {
   left: 0;
 }
 
-/* line 18, ../sass/components/_layout.scss */
-#clients-map {
-  height: 480px;
-}
-/* line 20, ../sass/components/_layout.scss */
+/* line 19, ../sass/components/_layout.scss */
 #clients-map .container {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
 /* line 25, ../sass/components/_layout.scss */
 #clients-map .map-container {
-  height: 100%;
-  width: 48%;
+  height: 320px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 30, ../sass/components/_layout.scss */
-#clients-map .map-caption {
+/* line 29, ../sass/components/_layout.scss */
+#clients-map .map-caption, #clients-map .map-container {
   width: 48%;
 }
-
-/* line 35, ../sass/components/_layout.scss */
-#video {
-  height: 480px;
-  background-color: white;
+@media screen and (max-width: 992px) {
+  /* line 29, ../sass/components/_layout.scss */
+  #clients-map .map-caption, #clients-map .map-container {
+    width: 100%;
+  }
 }
-/* line 38, ../sass/components/_layout.scss */
+@media screen and (max-width: 992px) {
+  /* line 35, ../sass/components/_layout.scss */
+  #clients-map .map-caption {
+    margin-top: 2em;
+  }
+}
+
+/* line 42, ../sass/components/_layout.scss */
+#video {
+  background-color: #fff;
+}
+/* line 44, ../sass/components/_layout.scss */
 #video .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-/* line 42, ../sass/components/_layout.scss */
-#video .video-wrapper {
+/* line 49, ../sass/components/_layout.scss */
+#video .video-wrapper, #video .video-caption {
   width: 48%;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 46, ../sass/components/_layout.scss */
-#video .video-caption {
-  width: 48%;
+@media screen and (max-width: 992px) {
+  /* line 49, ../sass/components/_layout.scss */
+  #video .video-wrapper, #video .video-caption {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 55, ../sass/components/_layout.scss */
+  #video .video-caption {
+    margin-top: 2em;
+  }
 }
 
-/* line 51, ../sass/components/_layout.scss */
+/* line 62, ../sass/components/_layout.scss */
 #services {
   text-align: center;
 }
-/* line 53, ../sass/components/_layout.scss */
+/* line 64, ../sass/components/_layout.scss */
 #services .services-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-/* line 56, ../sass/components/_layout.scss */
+/* line 68, ../sass/components/_layout.scss */
 #services .services-list .service {
   width: 32%;
   height: 250px;
@@ -232,12 +269,12 @@ header svg {
   justify-content: center;
   transition: all .5s ease-in-out;
 }
-/* line 67, ../sass/components/_layout.scss */
+/* line 79, ../sass/components/_layout.scss */
 #services .services-list .service p {
   background-color: rgba(222, 162, 135, 0.7);
   padding: 1em;
 }
-/* line 71, ../sass/components/_layout.scss */
+/* line 83, ../sass/components/_layout.scss */
 #services .services-list .service .img-container {
   width: 100%;
   height: 100%;
@@ -249,31 +286,60 @@ header svg {
   transition: all .5s ease-in-out;
   filter: grayscale(100);
 }
-/* line 82, ../sass/components/_layout.scss */
+/* line 94, ../sass/components/_layout.scss */
 #services .services-list .service:hover {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 84, ../sass/components/_layout.scss */
+/* line 96, ../sass/components/_layout.scss */
 #services .services-list .service:hover .img-container {
   top: 0;
   left: 0;
   transition: all .5s ease-in-out;
   filter: grayscale(0);
 }
-/* line 90, ../sass/components/_layout.scss */
+/* line 102, ../sass/components/_layout.scss */
 #services .services-list .service:hover p {
   background-color: #dea287;
   transition: all .5s ease-in-out;
 }
+@media screen and (max-width: 992px) {
+  /* line 108, ../sass/components/_layout.scss */
+  #services .services-list .service .img-container {
+    top: .5em;
+    left: .5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 68, ../sass/components/_layout.scss */
+  #services .services-list .service {
+    width: 100%;
+    margin-top: 2em;
+  }
+  /* line 116, ../sass/components/_layout.scss */
+  #services .services-list .service .img-container {
+    top: 1em;
+    left: 1em;
+  }
+}
 
-/* line 99, ../sass/components/_layout.scss */
+/* line 125, ../sass/components/_layout.scss */
 footer {
   height: 150px;
   background-color: #DEA287;
 }
-/* line 102, ../sass/components/_layout.scss */
+/* line 128, ../sass/components/_layout.scss */
+footer .footer-content {
+  padding-top: 1em;
+}
+/* line 130, ../sass/components/_layout.scss */
+footer .footer-content p {
+  font-size: 14px;
+}
+/* line 134, ../sass/components/_layout.scss */
 footer .copyright {
   height: 60px;
+  line-height: 60px;
+  font-size: 12px;
   background-color: #d99373;
 }
 
@@ -294,8 +360,9 @@ footer .copyright {
   left: 0;
   width: 100%;
   height: 100%;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
-/* line 16, ../sass/components/_video.scss */
+/* line 17, ../sass/components/_video.scss */
 .video-wrapper .iframe-wrapper:hover {
   filter: grayscale(0);
   transition: all .5s ease-in-out;
@@ -353,11 +420,22 @@ footer .copyright {
 }
 
 /* line 1, ../sass/components/_typography.scss */
+body {
+  color: #000;
+  font-size: 18px;
+}
+
+/* line 6, ../sass/components/_typography.scss */
+footer {
+  color: #fff;
+}
+
+/* line 10, ../sass/components/_typography.scss */
 h1, h2, h3 {
   margin-top: 0;
   display: inline-block;
 }
-/* line 4, ../sass/components/_typography.scss */
+/* line 13, ../sass/components/_typography.scss */
 h1:after, h2:after, h3:after {
   content: "";
   width: 50px;
@@ -366,7 +444,7 @@ h1:after, h2:after, h3:after {
   display: block;
   margin-top: .5em;
 }
-/* line 13, ../sass/components/_typography.scss */
+/* line 22, ../sass/components/_typography.scss */
 h1.centered:after, h2.centered:after, h3.centered:after {
   content: "";
   width: 50px;

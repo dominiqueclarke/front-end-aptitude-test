@@ -10,7 +10,7 @@ angular.module("test")
 
         map = new google.maps.Map(document.getElementById('map'), {
             center: CHL,
-            zoom: 15
+            zoom: 11
         });
 
         const infowindow = new google.maps.InfoWindow();
@@ -61,6 +61,34 @@ angular.module("test")
         {
             "name": "Peggy Sue BBQ",
             "placeID": "ChIJM5SwKAGfToYRENtzcwKeydo"
+        },
+        {
+            "name": "Record's BBQ",
+            "placeID": "ChIJO2ZLjtmZToYRajRIoko0D2U"
+        },
+        {
+            "name": "18th and Vine",
+            "placeID": "ChIJ1yMMUbSeToYRUPC-CkDXEoI"
+        },
+        {
+            "name": "Odom's BBQ",
+            "placeID": "ChIJDSYg2MGbToYR965GYtYHhNk"
+        },
+        {
+            "name": "Aloha Hawaiian BBQ",
+            "placeID": "ChIJbSsI2pmeToYR1bDLkkRXmGQ"
+        },
+        {
+            "name": "Slow Bone",
+            "placeID": "ChIJZypGDlaZToYRUjxJgKE1AFk"
+        },
+        {
+            "name": "Bonny Bryan's Smokehouse",
+            "placeID": "ChIJx05eiRucToYRH1OjrRAeVuw"
+        },
+        {
+            "name": "Baby Back Shak",
+            "placeID": "ChIJy4nGrf2YToYR8qIE3BtfVjU"
         }
     ]
 })

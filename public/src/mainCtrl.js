@@ -7,7 +7,7 @@ angular.module("test")
     jQuery(document).ready(function ($) {
 
         let carouselInt;
-        const intervalSpeed = 300000;
+        const intervalSpeed = 6000;
 
         const timer = function() {
             carouselInt = setInterval(function () {
@@ -34,13 +34,13 @@ angular.module("test")
                 timer();
         };
 
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
+        $('a.control_prev').click(function () {
+            moveLeft();
+        });
 
-    $('a.control_next').click(function () {
-        moveRight();
-    });
+        $('a.control_next').click(function () {
+            moveRight();
+        });
 
     });
 })

@@ -85,17 +85,27 @@ a.control_prev:hover, a.control_next:hover {
 }
 
 a.control_prev {
-  border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
 }
 
 a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
+    right: 0;
+    border-radius: 2px 0 0 2px;
 }
 
-.carousel_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
+svg.down-arrow {
+    transition:all .5s ease-in-out;
+    animation: 2s linear 0s infinite arrowAnimation;
+}
+
+@keyframes arrowAnimation {
+    0% {fill: $accent-color}
+    50% {fill: #fff}
+    100% {fill: $accent-color}
+}
+
+@-webkit-keyframes arrowAnimation {
+    0% {fill: $accent-color}
+    50% {fill: #fff}
+    100% {fill: $accent-color}
 }

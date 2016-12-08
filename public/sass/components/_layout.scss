@@ -1,6 +1,6 @@
 #video, #services, #clients-map {
     width:100%;
-    padding:5em 0;
+    padding:3em 0;
 }
 
 header {
@@ -16,35 +16,46 @@ header {
 }
 
 #clients-map {
-    height:480px;
     .container {
         display:flex;
         justify-content:space-between;
         flex-direction:row-reverse;
+        flex-wrap:wrap;
     }
     .map-container {
-        height:100%;
-        width:48%;
+        height:320px;
         box-shadow: $z-depth;
     }
-    .map-caption {
+    .map-caption, .map-container {
         width:48%;
+        @media screen and (max-width:$medium-screen) {
+            width:100%;
+        }
+    }
+    .map-caption {
+        @media screen and (max-width:$medium-screen) {
+            margin-top:2em;
+        }
     }
 }
 
 #video {
-    height:480px;
     background-color:#fff;
     .container {
         display:flex;
         justify-content:space-between;
+        flex-wrap:wrap;
     }
-    .video-wrapper {
+    .video-wrapper, .video-caption {
         width:48%;
-        box-shadow: $z-depth;
+        @media screen and (max-width:$medium-screen) {
+            width:100%;
+        }
     }
     .video-caption {
-        width:48%;
+        @media screen and (max-width:$medium-screen) {
+            margin-top:2em;
+        }
     }
 }
 
@@ -53,6 +64,7 @@ header {
     .services-list {
         display:flex;
         justify-content:space-between;
+        flex-wrap:wrap;
         .service {
             width:32%;
             height:250px;
@@ -92,6 +104,20 @@ header {
                     transition: all .5s ease-in-out;
                 }
             }
+            @media screen and (max-width:$medium-screen) {
+                .img-container {
+                    top:.5em;
+                    left:.5em;
+                }
+            }
+            @media screen and (max-width:$small-screen) {
+                width:100%;
+                margin-top:2em;
+                .img-container {
+                    top:1em;
+                    left:1em;
+                }
+            }
         }
     }
 }
@@ -99,8 +125,16 @@ header {
 footer {
     height:150px;
     background-color:$accent-color;
+    .footer-content {
+        padding-top:1em;
+        p {
+            font-size: 14px
+        }
+    }
     .copyright {
         height:60px;
+        line-height:60px;
+        font-size:12px;
         background-color:darken($accent-color, 5%);
     }
 }

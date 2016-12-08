@@ -12,6 +12,7 @@
         	left: 0;
         	width: 100%;
         	height: 100%;
+            box-shadow: $z-depth;
         }
         &:hover {
             filter:grayscale(0);
