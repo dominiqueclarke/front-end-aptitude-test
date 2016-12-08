@@ -1,18 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
-/*
- * Table of Contents:
- *
- *  1. Colors
- *  2. Buttons
- *  3. Grid
- *  4. Photo Slider
- *  5. Typography
- *  6. Footer
- */
 /* --- Colors --- */
 /* --- Typography --- */
+/*--- Z-depth: For making objects pop off the page --- */
 /* --- Media widths --- */
-/* Large Devices, Wide Screens */
 /* line 1, ../sass/components/_global.scss */
 * {
   box-sizing: border-box;
@@ -145,21 +135,22 @@ a.control_prev, a.control_next {
 a.control_prev:hover, a.control_next:hover {
   opacity: 1;
   background-color: #DEA287;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
   transition: all .5s ease-in-out;
 }
 
-/* line 99, ../sass/components/_carousel.scss */
+/* line 100, ../sass/components/_carousel.scss */
 a.control_prev {
   border-radius: 0 2px 2px 0;
 }
 
-/* line 103, ../sass/components/_carousel.scss */
+/* line 104, ../sass/components/_carousel.scss */
 a.control_next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }
 
-/* line 108, ../sass/components/_carousel.scss */
+/* line 109, ../sass/components/_carousel.scss */
 svg.down-arrow {
   transition: all .5s ease-in-out;
   animation: 2s linear 0s infinite arrowAnimation;
@@ -334,8 +325,8 @@ header svg {
   height: 100%;
   overflow: hidden;
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: .75em;
+  left: .75em;
   z-index: -1;
   transition: all .5s ease-in-out;
   filter: grayscale(100);

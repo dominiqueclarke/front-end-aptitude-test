@@ -93,6 +93,7 @@ a.control_prev, a.control_next {
 a.control_prev:hover, a.control_next:hover {
     opacity: 1;
     background-color: $accent-color;
+    box-shadow:$z-depth;
     transition:all .5s ease-in-out;
 }
 

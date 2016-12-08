@@ -1,40 +1,34 @@
 angular.module("test")
 .service("mapService", function() {
-    let map;
-    let coordinates;
 
-    const image = './assets/img/marker.png';
+    const icon = './assets/img/marker.png';
+
+    let map;
 
     this.initMap = () => {
-        const CHL = {lat: 32.8061, lng: -96.7941};
+        const center = {lat: 32.8061, lng: -96.7941};
 
         map = new google.maps.Map(document.getElementById('map'), {
-            center: CHL,
+            center,
             zoom: 11
         });
 
         const infowindow = new google.maps.InfoWindow();
         const service = new google.maps.places.PlacesService(map);
 
-        getMap(places);
-
-        function getMap(places) {
-            for (let i = 0; i < places.length; i++) {
-              createMarker(places[i].placeID);
-            }
+        for (let i = 0; i < places.length; i++) {
+            createMarker(places[i].placeID);
         }
-
 
         function createMarker(placeId) {
             service.getDetails({
                 placeId: placeId
-            }, function(place, status) {
-                console.log(place);
+            }, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
                         const marker = new google.maps.Marker({
-                        map: map,
+                        map,
                         position: place.geometry.location,
-                        icon: "./assets/img/marker.png"
+                        icon
                     });
                     google.maps.event.addListener(marker, 'click', function() {
                         infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +

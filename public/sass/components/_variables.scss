@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-/*
- * Table of Contents:
- *
- *  1. Colors
- *  2. Buttons
- *  3. Grid
- *  4. Photo Slider
- *  5. Typography
- *  6. Footer
- */
-
 /* --- Colors --- */
 $white-color: #fff;
 $black-color: #000;
@@ -20,7 +9,6 @@ $accent-color: #DEA287 !default;
 
 $link-color: $accent-color !default;
 
-
 /* --- Typography --- */
 
 $heading-font: "Lato";
@@ -28,12 +16,10 @@ $body-font-size: 18px;
 $body-font-color:$black-color;
 $footer-font-color:$white-color;
 
-//For making objects pop off the page
+/*--- Z-depth: For making objects pop off the page --- */
 $z-depth: 0 6px 10px 0 rgba(0,0,0,0.14),0 1px 18px 0 rgba(0,0,0,0.12),0 3px 5px -1px rgba(0,0,0,0.3);
 
 /* --- Media widths --- */
-
-/* Large Devices, Wide Screens */
 $large-screen: 1200px;
 $medium-screen: 992px;
 $small-screen: 720px;
