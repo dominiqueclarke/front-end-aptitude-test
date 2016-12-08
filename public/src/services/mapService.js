@@ -4,11 +4,13 @@ angular.module("test")
     const icon = './assets/img/marker.png';
 
     let map;
+    const markers = [];
+
 
     this.initMap = () => {
         const center = {lat: 32.8061, lng: -96.7941};
 
-        map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('gmap'), {
             center,
             zoom: 11
         });
@@ -17,27 +19,31 @@ angular.module("test")
         const service = new google.maps.places.PlacesService(map);
 
         for (let i = 0; i < places.length; i++) {
-            createMarker(places[i].placeID);
+            createMarker(places[i].placeID, i * 200);
         }
 
-        function createMarker(placeId) {
+        function createMarker(placeId, timeout) {
             service.getDetails({
                 placeId: placeId
             }, (place, status) => {
                 if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    window.setTimeout(function() {
                         const marker = new google.maps.Marker({
-                        map,
-                        position: place.geometry.location,
-                        icon
-                    });
-                    google.maps.event.addListener(marker, 'click', function() {
-                        infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                            'Rating: ' + place.rating + '<br>' +
-                            'Phone Number: ' + place.international_phone_number + '<br>' +
-                            place.formatted_address + '</div>'
-                        );
-                        infowindow.open(map, this);
-                    });
+                            position: place.geometry.location,
+                            map,
+                            animation: google.maps.Animation.DROP,
+                            icon
+                        });
+                        markers.push(marker);
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+                                'Rating: ' + place.rating + '<br>' +
+                                'Phone Number: ' + place.international_phone_number + '<br>' +
+                                place.formatted_address + '</div>'
+                            );
+                            infowindow.open(map, this);
+                        });
+                    }, timeout);
                 }
             });
         }

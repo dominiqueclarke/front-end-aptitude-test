@@ -7,6 +7,12 @@ footer {
     color:$footer-font-color;
 }
 
+#services, #video, #map {
+    h2 {
+        font-size:32px;
+    }
+}
+
 h1, h2, h3 {
     margin-top:0;
     display:inline-block;
