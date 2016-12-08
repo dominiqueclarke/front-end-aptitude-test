@@ -2,9 +2,10 @@
     position: relative;
     overflow: hidden;
     width:100vw;
-    height:100%;
+    height:100vh;
     border-radius: 4px;
     background-color:$accent-color;
+    transition:all .5s ease-in-out;
     ul {
         position: relative;
         margin: 0;
